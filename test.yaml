@@ -1,0 +1,13 @@
+---
+- hosts:
+        myservers
+become: yes
+tesks:
+- name: Addiung user sam1
+user:
+        name: sam1
+        shell: /bin/false
+- name: adding file to /tmp
+file:
+        name: /tmp/abdc1.php
+        state: touch
